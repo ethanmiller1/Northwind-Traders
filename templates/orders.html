@@ -1,0 +1,48 @@
+
+
+<!DOCTYPE html>
+
+
+<html>
+
+
+<head>
+  <title>Northwind</title>
+
+
+</head>
+
+
+
+<body>
+
+  <h1>Northwind Traders</h1>
+
+  <div id="orders">
+
+    <table>
+      <tr>
+        <th> Id </th>
+        <th> Order Date </th> 
+      </tr>
+      {% for order in orders %}
+      <tr>
+        <td><a href={{urls["index"]}}orders/{{order[0]}}>{{ order[0] }}</a></td>
+        <td> {{ order[1] }} </td>
+      </tr>
+      {% endfor %}
+    </table>
+
+  </div>
+
+  <div id="orders">
+  </div>
+  <br>
+  <div id="footer">{{ footer }}
+  </div>
+
+</body>
+
+
+
+</html>
