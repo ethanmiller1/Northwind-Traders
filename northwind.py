@@ -13,8 +13,21 @@ def index():
 @app.route("/products")
 def products():
  
-# place code here
+   db = sqlite3.connect("northwind2.db")
 
+   cursor = db.cursor() 
+ 
+   cursor.execute('''
+        SELECT id,product_code,product_name,description
+        FROM products
+        ''')
+
+   # Get all rows.
+   rows = cursor.fetchall()
+
+   db.close()
+
+   # Pass rows into Jinja2 render_template() function to use in products.html.
    return render_template("products.html", urls = {"index":url_for("index")}, products = rows, footer = copyright)
 
 @app.route("/products/<int:id>")
