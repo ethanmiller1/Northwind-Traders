@@ -7,7 +7,7 @@ copyright = "Copyright © 2019 Collin College All rights reserved."
 
 @app.route("/")
 def index():
-   urls = {"products":url_for("products"),"suppliers":"/suppliers","orders":"/orders"}    
+   urls = {"products":url_for("products"),"suppliers":url_for("suppliers"),"orders":url_for("orders")}
    return render_template("index.html", urls = urls,footer = copyright)
 
 # PRODUCTS
