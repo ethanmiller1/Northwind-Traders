@@ -10,6 +10,8 @@ def index():
    urls = {"products":url_for("products")}    
    return render_template("index.html", urls = urls,footer = copyright)
 
+# PRODUCTS
+
 @app.route("/products")
 def products():
  
@@ -50,3 +52,44 @@ def product_details(id):
    db.close()
    
    return render_template("product_detail.html", product = row, footer = copyright)
+
+# SUPPLIERS
+
+@app.route("/suppliers")
+def suppliers():
+ 
+   db = sqlite3.connect("northwind2.db")
+
+   cursor = db.cursor() 
+ 
+   cursor.execute('''
+         SELECT id,company, first_name, last_name
+         FROM suppliers
+         ''')
+
+   # Get all rows.
+   rows = cursor.fetchall()
+
+   db.close()
+
+   # Pass rows into Jinja2 render_template function to use in suppliers.html.
+   return render_template("suppliers.html", urls = {"index":url_for("index")}, suppliers = rows, footer = copyright)
+
+@app.route("/suppliers/<int:id>")
+def supplier_details(id):
+
+   db = sqlite3.connect("northwind2.db")
+
+   cursor = db.cursor() 
+ 
+   cursor.execute('''
+         SELECT id,company, last_name, first_name
+         FROM suppliers
+         WHERE id = {0} 
+         '''.format(id))
+
+   row = cursor.fetchone() 
+    
+   db.close()
+   
+   return render_template("supplier_detail.html", supplier = row, footer = copyright)
