@@ -21,11 +21,14 @@ If you do not have Flask installed, use the virtual environment in the repositor
 ```
 cd venv/Scripts
 activate
-cd ..
-cd ..
+cd ../..
 ```
 
 (Note that PowerShell may have trouble activating virtual enviroments. Use cmd.)
+
+### Entry Point
+
+`northwind.py` contains all the routes for the project. Use `set FLASK_APP=northwind.py` to set it as Flask's entry point for the project. Flask serves the application to [localhost:5000](localhost:5000 "Port 5000") by default.
 
 ## Technologies
 
