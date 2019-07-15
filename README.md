@@ -11,17 +11,18 @@ A simple web app to explore how Flask can use views in rendering web pages to UR
 Ensure you have Python and Flask installed, then:
 
 ``` bash
-git clone https://github.com/king-melchizedek/Python-and-Flask-Web-App.git
+git clone https://github.com/ethanmiller1/Python-and-Flask-Web-App.git
 set FLASK_APP=northwind.py
 flask run --reload
 ```
 
+(Note: Powershell is known to have problems with `set FLASK_APP=northwind.py`. Activate cmd with `cmd`.)
+
 If you do not have Flask installed, use the virtual environment in the repository:
 
 ```
-cd venv/Scripts
-activate
-cd ../..
+cmd
+cd venv/Scripts && activate && cd ../.. && set FLASK_APP=northwind.py && flask run --reload
 ```
 
 (Note that PowerShell may have trouble activating virtual enviroments. Use cmd.)

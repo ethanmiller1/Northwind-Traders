@@ -1,29 +1,59 @@
 <!DOCTYPE html>
-
-
 <html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
 
-<head>
+  <body>
+    <nav>
+      <div class="nav-wrapper green">
+        <a href="" class="brand-logo center">Logo</a>
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="" class="dropdown-button" data-activates="dropdown1">Dopdown<i class="material-icons right">arrow_drop_down</i></a>
+            <ul id="dropdown1" class="dropdown-content" style="width: 132px; position: absolute; top: 0px; left: 140.281px; opacity: 1; display: none;">
+              <li><a href="#!">one</a></li>
+              <li><a href="#!">two</a></li>
+              <li class="divider"></li>
+              <li><a href="#!">three</a></li>
+            </ul></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
 
-</head>
+      <h1>Northwind Traders</h1>
 
-  <h1>Northwind Traders</h1>
+      <!-- LINKS COLLECTION -->
+      <ul class="collection">
+        <li class="collection-item avatar" style="min-height: auto;">
+          <i class="material-icons circle">airport_shuttle</i>
+          <a href={{urls["suppliers"]}} class="collection-item">Suppliers</a>
+        </li>
+        <li class="collection-item avatar" style="min-height: auto;">
+          <i class="material-icons circle green">shop_two</i>
+          <a href={{urls["products"]}} class="collection-item">Products</a>
+        </li>
+        <li class="collection-item avatar" style="min-height: auto;">
+          <i class="material-icons circle red">assignment</i>
+          <a href={{urls["orders"]}} class="collection-item">Orders</a>
+        </li>
+      </ul>
+      <br>
+      <div id="footer">{{ footer }}</div>
+    </div>
 
-  <div>
-    <h2><a href={{urls["suppliers"]}}>Suppliers</a></h2>
-    <h2><a href={{urls["products"]}}>Products</a></h2>
-    <h2><a href={{urls["orders"]}}>Orders</a></h2>
-
-  </div>
-  
-<body>
-<br>
-
-  <div id="footer">{{ footer }}
-  </div>
-
+    <!--JavaScript at end of body for optimized loading-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   </body>
-
-
 </html>
+
+<!DOCTYPE html>

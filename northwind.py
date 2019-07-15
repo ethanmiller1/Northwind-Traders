@@ -3,7 +3,7 @@ import sqlite3
 
 app = Flask(__name__)
 
-copyright = "Copyright © 2019 Collin College All rights reserved."
+copyright = "Copyright © 2019 Ethan Miller"
 
 @app.route("/")
 def index():
