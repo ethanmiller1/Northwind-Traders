@@ -1,2 +1,2 @@
 [build]
-  command = "set FLASK_APP=northwind.py && set FLASK_DEBUG=1 && flask run"
+  command = "python app.py"
