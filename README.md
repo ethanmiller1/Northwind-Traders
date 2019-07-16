@@ -12,20 +12,16 @@ Ensure you have Python and Flask installed, then:
 
 ``` bash
 git clone https://github.com/ethanmiller1/Python-and-Flask-Web-App.git
-set FLASK_APP=northwind.py
-flask run --reload
+cmd
+python –m venv venv
+cd venv/Scripts && activate && cd ../..
+pip install -r requirements.txt
+set FLASK_APP=northwind.py && flask run --reload
 ```
 
 (Note: Powershell is known to have problems with `set FLASK_APP=northwind.py`. Activate cmd with `cmd`.)
 
-If you do not have Flask installed, use the virtual environment in the repository:
-
-```
-cmd
-cd venv/Scripts && activate && cd ../.. && set FLASK_APP=northwind.py && flask run --reload
-```
-
-(Note that PowerShell may have trouble activating virtual enviroments. Use cmd.)
+If you add any additional modules, be sure to render a new `requirements.txt` with `pip freeze > requirements.txt`.
 
 ### Entry Point
 
