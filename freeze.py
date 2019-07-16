@@ -3,4 +3,5 @@ from northwind import app
 
 freezer = Freezer(app)
 
-freezer.freeze()
+if __name__ == '__main__':
+    freezer.freeze()

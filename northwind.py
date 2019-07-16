@@ -134,3 +134,6 @@ def order_details(id):
    db.close()
    
    return render_template("order_detail.html", order = row, footer = copyright)
+
+if __name__ == '__main__':
+    app.run(debug=True)
