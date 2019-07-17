@@ -47,6 +47,12 @@ if __name__ == '__main__':
 
 ![](https://miro.medium.com/max/700/1*kPMjcU3kUaoJ9DmamhlcRA.png)
 
+Freezer basically renders all of your possible HTML pages into a "build" folder and Netlify runs the website from there. This provides certain limitations and is not ideal for websites that interact with client POST requests, but will be fine for a static database as we have here.
+
+### uwsgi
+
+To keep your app MVC in production, create a uwsgi configuration file named `uwsgi.ini`.
+
 ## Technologies
 
 There are 7 technologies used in this project:

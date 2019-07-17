@@ -1,7 +1,6 @@
 from flask_frozen import Freezer
-from northwind import app
+from app import app
 
 freezer = Freezer(app)
 
-if __name__ == '__main__':
-    freezer.freeze()
+freezer.freeze()
