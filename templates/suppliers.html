@@ -1,37 +1,14 @@
+{% extends "partials/base.html" %}
+{% block title %}Products{% endblock %}
 
+{% block html_head %}
+  {% include "partials/data_table.html" %}
+{% endblock %}
 
-<!DOCTYPE html>
-
-
-<html>
-
-
-<head>
-  <title>Northwind</title>
-  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
-
-  <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
-  
-  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
-
-  <script>
-    $(document).ready( function () {
-       $('#table_suppliers').DataTable();
-     } );
-  </script>
-
-</head>
-
-
-
-<body>
-
+{% block content %}
   <h1>Northwind Traders</h1>
-
   <div id="supplier">
-
-    <table id="table_suppliers" class="display">
-      <!-- thead for search queries and filter -->
+    <table id="table_data" class="display">
       <thead>
         <tr>
           <th> Id </th>
@@ -51,17 +28,5 @@
         {% endfor %}
       </tbody>
     </table>
-  <br>
   </div>
-
-  <div id="orders">
-  </div>
-  <br>
-  <div id="footer">{{ footer }}
-  </div>
-
-</body>
-
-
-
-</html>
+{% endblock %}
