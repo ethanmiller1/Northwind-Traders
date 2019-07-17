@@ -32,6 +32,22 @@ set FLASK_APP=northwind.py && set FLASK_DEBUG=1 && flask run --reload
 
 `northwind.py` contains all the routes for the project. Use `set FLASK_APP=northwind.py` to set it as Flask's entry point for the project. Flask serves the application to [localhost:5000](localhost:5000 "Port 5000") by default.
 
+## Deploy to Heroku
+
+1. Download the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli#download-and-install) and [login from your terminal](https://devcenter.heroku.com/articles/heroku-cli#getting-started).
+1. Create a `Procfile` containing the following code:
+
+``` bash
+web: gunicorn northwind:app
+```
+
+3. Create a [Heroku app](https://devcenter.heroku.com/articles/getting-started-with-python#deploy-the-app) with `heroku create`.
+1. Commit changes to git and push to the created heroku remote:
+
+``` bash
+git push heroku master
+```
+
 ## Deploy to Netlify
 
 1. Download Frozen Flask with `pip install Frozen-Flask`, then create a file called `freeze`:
