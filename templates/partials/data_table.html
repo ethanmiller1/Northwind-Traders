@@ -1,0 +1,25 @@
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+<script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+<script>
+  $(document).ready( function () {
+    $('#table_orders').DataTable();
+  } );
+</script>
+
+<style type="text/css">
+  select {
+  display: inline;
+  width: auto;
+  height: auto;
+  padding: 0;
+  border: 1px solid rgb(169, 169, 169);
+  }
+  label {
+  font-size: 1rem;
+  }
+  .dataTables_filter label input {
+    height: auto !important;
+    width: auto !important;
+  }
+</style>
