@@ -16,6 +16,13 @@
   </head>
 
   <body>
+  <!-- DROPDOWN -->
+    <ul id="dropdown1" class="dropdown-content">
+      <li><a href="#!">Resume</a></li>
+      <li><a href="https://www.linkedin.com/in/ethan-miller-649206188/">LinkedIn</a></li>
+      <li class="divider"></li>
+      <li><a href="https://ethanmiller1.github.io/">Portfolio</a></li>
+    </ul>
     <nav>
       <div class="nav-wrapper green">
         <a href="/" class="brand-logo center">
@@ -25,20 +32,17 @@
         <ul id="nav-mobile" class="left hide-on-med-and-down">
           <li><a href="/">Home</a></li>
           <li><a href="#">About</a></li>
-          <li><a href="" class="dropdown-button" data-activates="dropdown1">Dopdown<i class="material-icons right">arrow_drop_down</i></a>
-            <ul id="dropdown1" class="dropdown-content" style="width: 132px; position: absolute; top: 0px; left: 140.281px; opacity: 1; display: none;">
-              <li><a href="#!">one</a></li>
-              <li><a href="#!">two</a></li>
-              <li class="divider"></li>
-              <li><a href="#!">three</a></li>
-            </ul></li>
+          <li><a href="" class="dropdown-button" data-activates="dropdown1">Dopdown<i class="material-icons right">arrow_drop_down</i></a></li>
           <li><a href="https://github.com/ethanmiller1/Northwind-Traders">Github</a></li>
         </ul>
       </div>
     </nav>
+
+    <!-- MAIN CONTENT -->
     <div class="container">
       {% block content %}{% endblock %}
       
+    <!-- FOOTER -->
       <div id="footer">
         {% block footer %}
         <br>
@@ -47,8 +51,9 @@
       </div>
     </div>
 
-    <!--JavaScript at end of body for optimized loading-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!--Import jQuery before materialize.js-->
+    {% block scripts %}{% endblock %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
   </body>
 </html>
 
