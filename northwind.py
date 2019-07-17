@@ -1,7 +1,7 @@
 from flask import Flask, render_template, url_for
 import sqlite3
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='/static')
 
 copyright = "Copyright © 2019 Ethan Miller"
 

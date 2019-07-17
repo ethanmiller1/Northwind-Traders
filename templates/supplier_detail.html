@@ -1,18 +1,14 @@
-  <h1>Northwind Traders</h1>
+{% extends "partials/base.html" %}
+{% block title %}Supplier Details{% endblock %}
 
-  <div id="supplier">
+{% block content %}
+<h1>Northwind Traders</h1>
 
-    Id: {{ supplier[0] }}<br>
-    Company: {{ supplier[1] }}<br>
-    Last Name: {{ supplier[2] }}<br>
-    First Name: {{ supplier[3] }}<br>
-  </div>
-  <br>
-  <div id="footer">{{ footer }}
-  </div>
+<div id="supplier">
 
-</body>
-
-
-
-</html>
+  Id: {{ supplier[0] }}<br>
+  Company: {{ supplier[1] }}<br>
+  Last Name: {{ supplier[2] }}<br>
+  First Name: {{ supplier[3] }}<br>
+</div>
+{% endblock %}

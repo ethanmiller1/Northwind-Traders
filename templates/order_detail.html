@@ -1,15 +1,11 @@
-  <h1>Northwind Traders</h1>
+{% extends "partials/base.html" %}
+{% block title %}Order Details{% endblock %}
 
-  <div id="order">
-    Id: {{ order[0] }}<br>
-    Order Date: {{ order[1] }}<br>
-  </div>
-  <br>
-  <div id="footer">{{ footer }}
-  </div>
+{% block content %}
+<h1>Northwind Traders</h1>
 
-</body>
-
-
-
-</html>
+<div id="order">
+  Id: {{ order[0] }}<br>
+  Order Date: {{ order[1] }}<br>
+</div>
+{% endblock %}
