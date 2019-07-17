@@ -2,8 +2,10 @@
 <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
 <script>
+  let id = 'data'
+
   $(document).ready( function () {
-    $('#table_orders').DataTable();
+    $(`#table_${id}`).DataTable();
   } );
 </script>
 
